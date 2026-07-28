@@ -42,7 +42,24 @@ button {
   color: #000;
   transform: scale(1.05);
   transition: 0.3s;
-            }     
+            }   
+    /* TYPING ANIMATION */
+.typing {
+  overflow: hidden;
+  border-right: 3px solid #00ff88;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 3s steps(20), blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}    
 </style>
 
    
@@ -79,7 +96,7 @@ button {
 </head>
 <body>
   <img src="hotonka.jpg" alt="Hotona" width="150">
-    <h1>Muhammad Ashiru</h1>
+    <h1 class="typing">Muhammad Ashiru</h1>
     <p>Ni sabon dalibi ne a makarantar Meta AI, ina koyon ethical hacking, kuma nayi dacen malami kwarai da gaske.</p>
     <a href="https://google.com">Danna nan ka je Google</a>
     <br><br>
