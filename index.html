@@ -36,6 +36,25 @@ h1 {
 /* MU SA BUTTON YA HASKAKA DA JINKIRI */
 button {
   animation: fadeInUp 1s ease-out 0.5s both;
+    /* MU SA SUNANKA YA RUBUTU */
+.typing {
+  overflow: hidden;
+  border-right: 3px solid #00ff88; /* Wannan shine pointer din kore */
+  white-space: nowrap;
+  margin: 0 auto;
+  width: 100%;
+  animation: typing 3.5s steps(17), blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: #00ff88; }
+}
 }
    button:hover {
   background: #00ff88;
