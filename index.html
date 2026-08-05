@@ -134,10 +134,27 @@ button {
     <a href="mailto:ashirumuhammad141@gmail.com" style="color: #00ff88; margin: 0 15px; text-decoration: none; font-weight: bold;">Email</a>
   <p style="color: #aaa; font-size: 0.9em; margin-top: 20px;">© 2026 Muhammad Ashiru. Duk hakkoki mallakarsa.</p>
 </footer>
-    <script>
-  document.querySelector('form').addEventListener('submit', function() {
-    alert('Na gode! Sakonka ya tafi. Zan amsa maka da wuri 🙏');
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Kada ya sake page
+    
+    // 1. Mu dauki abin da mutum ya rubuta
+    let sunan = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let sako = document.getElementById('message').value;
+    
+    // 2. Mu duba ko ya cika komai
+    if(sunan === "" || email === "" || sako === ""){
+      alert("Taf, ka cika dukkan wuraren da suka rage 🙏");
+      return;
+    }
+    
+    // 3. Idan ya cika, mu nuna sako na musamman
+    alert("Godiya " + sunan + "! Na karbi sakonka. Zan amsa maka a " + email + " da wuri in sha Allah 🙏");
+    
+    // 4. Mu share form bayan ya tura
+    document.getElementById('contactForm').reset();
   });
-    </script>
+</script>
 </body>
 </html>
